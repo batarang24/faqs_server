@@ -4,7 +4,8 @@ const db = mysql.createConnection({
     host: 'localhost',
     user: 'faqs_user', // Change as needed
     password: 'chandiran5', // Change as needed
-    database: 'faqs'
+    database: 'faqs',
+    port:3306
 });
 
 db.connect(err => {
