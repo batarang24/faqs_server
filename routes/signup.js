@@ -8,9 +8,10 @@ require('dotenv').config();
 // Signup Route
 router.post('/signup', async (req, res) => {
     const { uid, name, email, password } = req.body;
+    
     console.log(req.body);
     if (!uid || !name || !email || !password) {
-        return res.status(400).json({ error: 'All fields are required' });
+        return res.status(400).json({ error: 'All fields required'+req.body });
     }
 
     try {
